@@ -1,25 +1,25 @@
 // Initial and hardcoded settings
-#define initial_speed_wpm 26             // "factory default" keyer speed setting
+#define initial_speed_wpm 28             // "factory default" keyer speed setting
 #define initial_command_mode_speed_wpm 20 // "factory default" command mode speed setting 
 #define initial_sidetone_freq 600        // "factory default" sidetone frequency setting
 #define hz_high_beep 1500                // frequency in hertz of high beep
 #define hz_low_beep 400                  // frequency in hertz of low beep
 #define initial_dah_to_dit_ratio 300     // 300 = 3 / normal 3:1 ratio
 #define initial_ptt_lead_time_tx1 0         // PTT lead time in mS
-#define initial_ptt_tail_time_tx1 10         // PTT tail time in mS
+#define initial_ptt_tail_time_tx1 0         // PTT tail time in mS
 #define initial_ptt_lead_time_tx2 0         // PTT lead time in mS
-#define initial_ptt_tail_time_tx2 10         // PTT tail time in mS
+#define initial_ptt_tail_time_tx2 0         // PTT tail time in mS
 #define initial_ptt_lead_time_tx3 0         // PTT lead time in mS
-#define initial_ptt_tail_time_tx3 10         // PTT tail time in mS
+#define initial_ptt_tail_time_tx3 0         // PTT tail time in mS
 #define initial_ptt_lead_time_tx4 0         // PTT lead time in mS
-#define initial_ptt_tail_time_tx4 10         // PTT tail time in mS
+#define initial_ptt_tail_time_tx4 0         // PTT tail time in mS
 #define initial_ptt_lead_time_tx5 0         // PTT lead time in mS
-#define initial_ptt_tail_time_tx5 10         // PTT tail time in mS
+#define initial_ptt_tail_time_tx5 0         // PTT tail time in mS
 #define initial_ptt_lead_time_tx6 0         // PTT lead time in mS
-#define initial_ptt_tail_time_tx6 10         // PTT tail time in mS
+#define initial_ptt_tail_time_tx6 0         // PTT tail time in mS
 #define initial_qrss_dit_length 1        // QRSS dit length in seconds
-#define initial_pot_wpm_low_value 13     // Potentiometer WPM fully CCW
-#define initial_pot_wpm_high_value 35    // Potentiometer WPM fully CW
+#define initial_pot_wpm_low_value 10     // Potentiometer WPM fully CCW
+#define initial_pot_wpm_high_value 54    // Potentiometer WPM fully CW
 #define wpm_limit_low 5
 #define wpm_limit_high 60
 #define potentiometer_change_threshold 0.9 // don't change the keyer speed until pot wpm has changed more than this
@@ -50,7 +50,7 @@
 #define winkey_paddle_echo_buffer_decode_time_factor 1600.0
 #define potentiometer_always_on 0
 #define ptt_interlock_check_every_ms 100
-#define ptt_interlock_active_state HIGH
+#define ptt_interlock_active_state LOW
 #define unknown_cw_character '*'
 #define cli_paddle_echo_on_at_boot 1
 #define cli_straight_key_echo_on_at_boot 1
@@ -64,7 +64,7 @@
 #define serial_program_memory_buffer_size 500
 
 #ifdef FEATURE_COMMAND_BUTTONS
-  #define analog_buttons_number_of_buttons 4  // includes the command button (command button + 3 memory buttons = 4)
+  #define analog_buttons_number_of_buttons 3  // includes the command button (command button + 3 memory buttons = 4)
   #define analog_buttons_r1 10
   #define analog_buttons_r2 1
 #endif
@@ -213,7 +213,7 @@
   #define mem12 11
 #endif //#if defined(FEATURE_4x4_KEYPAD)|| defined (FEATURE_3x4_KEYPAD)
 
-#define initial_sidetone_mode 1            // Sidetone mode, 0=OFF, 1=ON, 2=PADDLE_ONLY
+#define initial_sidetone_mode 0            // Sidetone mode, 0=OFF, 1=ON, 2=PADDLE_ONLY
 
 #define sd_card_spi_ss_line 4
 

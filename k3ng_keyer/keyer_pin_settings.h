@@ -2,17 +2,17 @@
 #ifndef keyer_pin_settings_h
 #define keyer_pin_settings_h
 
-#define paddle_left 2
-#define paddle_right 5
-#define tx_key_line_1 11       // (high = key down/tx on)
-#define tx_key_line_2 12
+#define paddle_left 9
+#define paddle_right 10
+#define tx_key_line_1 13       // (high = key down/tx on)
+#define tx_key_line_2 0
 #define tx_key_line_3 0
 #define tx_key_line_4 0
 #define tx_key_line_5 0
 #define tx_key_line_6 0
-#define sidetone_line 4         // connect a speaker for sidetone
+#define sidetone_line 5         // connect a speaker for sidetone
 #define potentiometer A0        // Speed potentiometer (0 to 5 V) Use pot from 1k to 10k
-#define ptt_tx_1 0              // PTT ("push to talk") lines
+#define ptt_tx_1 A2             // PTT ("push to talk") lines
 #define ptt_tx_2 0              //   Can be used for keying fox transmitter, T/R switch, or keying slow boatanchors
 #define ptt_tx_3 0              //   These are optional - set to 0 if unused
 #define ptt_tx_4 0
@@ -90,7 +90,7 @@ FEATURE_SIDETONE_SWITCH
 #endif //FEATURE_ALPHABET_SEND_PRACTICE
 
 #ifdef FEATURE_PTT_INTERLOCK
-  #define ptt_interlock 0  // this pin disables PTT and TX KEY
+  #define ptt_interlock 11  // this pin disables PTT and TX KEY
 #endif //FEATURE_PTT_INTERLOCK
 
 #ifdef FEATURE_STRAIGHT_KEY
@@ -140,14 +140,14 @@ FEATURE_SIDETONE_SWITCH
 #endif
 
 #ifdef FEATURE_SEQUENCER
-  #define sequencer_1_pin 0
+  #define sequencer_1_pin A3
   #define sequencer_2_pin 0
-  #define sequencer_3_pin 0
+  #define sequencer_3_pin A4
   #define sequencer_4_pin 0
-  #define sequencer_5_pin 0
+  #define sequencer_5_pin A5
 #endif //FEATURE_SEQUENCER
 
-#define ptt_input_pin 0
+#define ptt_input_pin 12
 
 #define tx_inhibit_pin 0
 #define tx_pause_pin 0   

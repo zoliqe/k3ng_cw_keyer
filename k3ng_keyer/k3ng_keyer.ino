@@ -16273,8 +16273,8 @@ void initialize_keyer_state(){
     configuration.ptt_tail_time[5] = initial_ptt_tail_time_tx6;  
 
     for (int x = 0; x < 5; x++){
-      configuration.ptt_active_to_sequencer_active_time[x] = 0;
-      configuration.ptt_inactive_to_sequencer_inactive_time[x] = 0;
+      configuration.ptt_active_to_sequencer_active_time[x] = x * 10;
+      configuration.ptt_inactive_to_sequencer_inactive_time[x] = x * 10;
     }
   #endif //OPTION_SAVE_MEMORY_NANOKEYER        
 

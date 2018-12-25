@@ -1,3 +1,12 @@
+# Changes from K3NG repository
+Simple keyer configuration with these features enabled:
+- potentiometer
+- WinKey2 emulation
+- Memories support
+- Sequencer (pins 1,3,5; delays: 5,15,25ms)
+
+--
+
 # k3ng_cw_keyer
 K3NG Arduino CW Keyer
 

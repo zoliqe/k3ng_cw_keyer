@@ -43,10 +43,12 @@
 #define tx_key_dit 0            // if defined, goes active for dit (any transmitter) - customized with tx_key_dit_and_dah_pins_active_state and tx_key_dit_and_dah_pins_inactive_state
 #define tx_key_dah 0            // if defined, goes active for dah (any transmitter) - customized with tx_key_dit_and_dah_pins_active_state and tx_key_dit_and_dah_pins_inactive_state
 
-#ifdef FEATURE_COMMAND_BUTTONS
+#define potentiometer_enable_pin 0  // if defined, the potentiometer will be enabled only when this pin is held low; set to 0 to ignore this pin
+
+#ifdef FEATURE_BUTTONS
   #define analog_buttons_pin A2
   #define command_mode_active_led 0
-#endif //FEATURE_COMMAND_BUTTONS
+#endif //FEATURE_BUTTONS
 
 
 //lcd pins
@@ -74,11 +76,8 @@
   #define OPTION_ENCODER_ENABLE_PULLUPS     // define to enable weak pullups.
 #endif //FEATURE_ROTARY_ENCODER
 
-
-#ifdef FEATURE_ALPHABET_SEND_PRACTICE
-  #define correct_answer_led 0
-  #define wrong_answer_led 0
-#endif //FEATURE_ALPHABET_SEND_PRACTICE
+#define correct_answer_led 0
+#define wrong_answer_led 0
 
 #ifdef FEATURE_PTT_INTERLOCK
   #define ptt_interlock 0  // this pin disables PTT and TX KEY
@@ -88,14 +87,11 @@
   #define pin_straight_key 52
 #endif //FEATURE_STRAIGHT_KEY
 
-#ifdef FEATURE_CW_DECODER
-  #define cw_decoder_pin A4//A11 //A5 //A3  
-  #ifdef OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
-    #define cw_decoder_audio_input_pin A4 // this must be an analog pin!
-  #endif //OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
-  #define cw_decoder_indicator 4
-#endif //FEATURE_CW_DECODER
-
+// FEATURE_CW_DECODER & OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
+// See https://github.com/k3ng/k3ng_cw_keyer/wiki/385-Feature:-CW-Decoder for details
+#define cw_decoder_pin A4             // This is for use with external decoding hardware
+#define cw_decoder_audio_input_pin A4 // This is for audio detection decoding using OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR; this must be an analog pin!
+#define cw_decoder_indicator 4        // Output - goes HIGH when cw tone is detected by OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
 
 #if defined(FEATURE_COMPETITION_COMPRESSION_DETECTION)
   #define compression_detection_pin 13

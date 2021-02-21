@@ -1,5 +1,6 @@
 // don't touch these unless you know what the hell you are doing or you're asked to uncomment these for debug dumps
 // #define DEBUG_STARTUP
+// #define DEBUG_STARTUP_BLINKS
 // #define DEBUG_LOOP
 // #define DEBUG_EEPROM
 // #define DEBUG_MEMORIES
@@ -53,5 +54,9 @@
 // #define DEBUG_SD_CARD
 // #define DEBUG_FARNSWORTH
 // #define DEBUG_FARNSWORTH_TIMING
+// #define DEBUG_ASYNC_EEPROM_WRITE
+// #define DEBUG_SERVICE_SEND_BUFFER
+// #define DEBUG_EEPROM_READ_SETTINGS
+// #define DEBUG_LOOP_ELEMENT_LENGTHS
 
 // #define OPTION_WINKEY_IGNORE_FIRST_STATUS_REQUEST
